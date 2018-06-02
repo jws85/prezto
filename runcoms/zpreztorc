@@ -23,6 +23,7 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'syntax-highlighting' \
   'prompt' \
+  'fasd' \
   'git' \
   'tmux' \
   'welcome'
