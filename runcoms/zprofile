@@ -5,53 +5,36 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
-#
-# Browser
-#
-
-if [[ "$OSTYPE" == darwin* ]]; then
-  export BROWSER='open'
-fi
-
-#
-# Editors
-#
-
-export EDITOR='nano'
-export VISUAL='nano'
-export PAGER='less'
-
-#
-# Language
-#
-
 if [[ -z "$LANG" ]]; then
   export LANG='en_US.UTF-8'
 fi
 
-#
-# Paths
-#
+# Editors #############################################################
 
-# Ensure path arrays do not contain duplicates.
-typeset -gU cdpath fpath mailpath path
+export EDITOR='vim'
+export VISUAL='emacs'
+export PAGER='less'
 
-# Set the list of directories that cd searches.
-# cdpath=(
-#   $cdpath
-# )
+# Paths ###############################################################
 
-# Set the list of directories that Zsh searches for programs.
-path=(
-  /usr/local/{bin,sbin}
-  $path
-)
+# I plan to deprecate this eventually, in favor of ~/.local/bin
+export PATH=$HOME/bin:$PATH
 
-#
-# Less
-#
+# Compile/install programs inside your home directory
+# http://nullprogram.com/blog/2017/06/19/
+export BUILD_PREFIX=$HOME/.local
+export PATH=$BUILD_PREFIX/bin:$PATH
+export C_INCLUDE_PATH=$BUILD_PREFIX/include
+export CPLUSPLUS_INCLUDE_PATH=$BUILD_PREFIX/include
+export LIBRARY_PATH=$BUILD_PREFIX/lib
+export LD_LIBRARY_PATH=$BUILD_PREFIX/lib
+export PKG_CONFIG_PATH=$BUILD_PREFIX/lib/pkgconfig
+unset MANPATH
+export MANPATH=$BUILD_PREFIX/share/man:$(manpath)
 
-# Set the default Less options.
+# less ################################################################
+
+# Set the default less options.
 # Mouse-wheel scrolling has been disabled by -X (disable screen clearing).
 # Remove -X and -F (exit if the content fits on one screen) to enable it.
 export LESS='-F -g -i -M -R -S -w -X -z-4'
@@ -61,3 +44,13 @@ export LESS='-F -g -i -M -R -S -w -X -z-4'
 if (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
+
+# SSH #################################################################
+
+# ssh
+export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Line-drawing characters #############################################
+
+# Fix aptitude line-drawing chars in PuTTY: https://superuser.com/a/278337
+export NCURSES_NO_UTF8_ACS=1
