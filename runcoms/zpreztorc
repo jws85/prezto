@@ -34,6 +34,13 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 # Auto convert .... to ../..
 zstyle ':prezto:module:editor' dot-expansion 'yes'
 
+# Disable safety features on rm
+# I'll spare everyone the rant.  I really did try this; I like the idea.
+# The problem is that sometimes you really just need to delete a directory,
+# and maybe it was created with big monolithic tools (MonoDevelop, in this
+# case) and you don't really want to mash 'y' 9001 times.  Sorry!
+zstyle ':prezto:module:utility' safe-ops 'no'
+
 # Prompt ##############################################################
 
 # Set the prompt theme to load.
