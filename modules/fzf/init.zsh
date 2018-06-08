@@ -8,4 +8,11 @@
 # to install the binaries and fzf config files, but leave config
 # files alone.
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ -f ~/.fzf.zsh ]; then
+    source ~/.fzf.zsh
+else
+    if [ -x "$(which git)" ]; then
+        git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+        ~/.fzf/install --no-update-rc
+    fi
+fi
