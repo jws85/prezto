@@ -59,3 +59,9 @@ export NCURSES_NO_UTF8_ACS=1
 
 # Disable it!!!!!!
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
+# Local changes #######################################################
+
+if [ -f ~/.zshenv.local ]; then
+   . ~/.zshenv.local
+fi
