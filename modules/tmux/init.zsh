@@ -23,6 +23,10 @@ if ([[ "$TERM_PROGRAM" = 'iTerm.app' ]] && \
   _tmux_iterm_integration='-CC'
 fi
 
+if zstyle -t ':prezto:module:tmux' colors-256; then
+  _tmux_256_colors="-2"
+fi
+
 if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" && -z "$INSIDE_EMACS" && -z "$VSCODE_PID" ]] && ( \
   ( [[ -n "$SSH_TTY" ]] && zstyle -t ':prezto:module:tmux:auto-start' remote ) ||
   ( [[ -z "$SSH_TTY" ]] && zstyle -t ':prezto:module:tmux:auto-start' local ) \
@@ -38,12 +42,12 @@ if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" && -z "$INSIDE_EMACS" && -z "$VSCOD
   fi
 
   # Attach to the 'prezto' session or to the last session used. (detach first)
-  exec tmux $_tmux_iterm_integration attach-session -d
+  exec tmux $_tmux_256_colors $_tmux_iterm_integration attach-session -d
 fi
 
 #
 # Aliases
 #
 
-alias tmuxa="tmux $_tmux_iterm_integration new-session -A"
+alias tmuxa="tmux $_tmux_256_colors $_tmux_iterm_integration new-session -A"
 alias tmuxl='tmux list-sessions'
