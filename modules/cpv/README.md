@@ -1,16 +1,18 @@
 # cpv module
 
-I took the [code for this plugin out of oh-my-zsh][1], and changed its
-filename for use in prezto.  The rest of the readme is unchanged from
-the original OMZ plugin.
-
 This plugin defines a `cpv` function that uses `rsync` so that you
 get the features and security of this command.
 
-To enable, add `cp` to your `plugins` array in your zshrc file:
+I took the [code for the 'cp' plugin out of oh-my-zsh][1], and changed
+its filename for use in prezto.  This readme has been changed a bit to
+reflect this.
+
+To enable, add `cpv` to your `pmodule` list in your zshrc file:
 
 ```zsh
-plugins=(... cp)
+zstyle ':prezto:load' pmodule \
+  ... \
+  'cpv'
 ```
 
 ## Description
