@@ -29,6 +29,7 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'tmux' \
   'colored-man-pages' \
+  'cpv' \
   'fzf' \
   'welcome'
 
