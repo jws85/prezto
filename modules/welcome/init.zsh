@@ -42,7 +42,7 @@ welcome ()
     coloruptime
 
     if [ -x "$(which fortune)" ]; then
-        fortune ; echo
+        fortune -s ; echo
     fi
 }
 
