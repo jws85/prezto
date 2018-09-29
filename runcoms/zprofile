@@ -56,6 +56,10 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Fix aptitude line-drawing chars in PuTTY: https://superuser.com/a/278337
 export NCURSES_NO_UTF8_ACS=1
 
+# PHP/Composer ########################################################
+
+export PATH=~/.config/composer/vendor/bin:$PATH
+
 # Microsoft telemetry #################################################
 
 # Disable it!!!!!!
