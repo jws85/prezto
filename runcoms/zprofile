@@ -60,6 +60,14 @@ export NCURSES_NO_UTF8_ACS=1
 
 export PATH=$( composer config -g home )/vendor/bin:$PATH
 
+# Golang ##############################################################
+
+# Now that go modules are a thing, I'm moving the GOPATH to a hidden
+# location and making it non-configurable, bwahahahaha
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/.config/go
+export PATH=$PATH:$GOPATH/bin
+
 # Microsoft telemetry #################################################
 
 # Disable it!!!!!!
