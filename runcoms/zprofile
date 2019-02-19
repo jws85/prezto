@@ -58,7 +58,9 @@ export NCURSES_NO_UTF8_ACS=1
 
 # PHP/Composer ########################################################
 
-export PATH=$( composer config -g home )/vendor/bin:$PATH
+if (( $+commands[composer] )) ; then
+    export PATH=$( composer config -g home )/vendor/bin:$PATH
+fi
 
 # Golang ##############################################################
 
