@@ -12,3 +12,13 @@ alias calc="em -l '(full-calc)'"
 # get the weather
 alias weather="curl wttr.in"
 
+# put useful emacs bindings back into vi insert mode
+# because i have permanent emacs dain bramage
+# also these conflict with nothing as far as i can tell?
+bindkey -M viins '^A' beginning-of-line
+bindkey -M viins '^B' backward-char
+bindkey -M viins '^E' end-of-line
+bindkey -M viins '^F' forward-char
+bindkey -M viins '^K' kill-line
+bindkey -M viins '^P' up-history
+bindkey -M viins '^N' down-history

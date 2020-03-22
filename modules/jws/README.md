@@ -21,5 +21,19 @@ Weather
 
 From wttr.in.
 
+zsh vi mode
+-----------
+
+I dislike how vi modes must be ideologically pure and studiously avoid
+emacs bindings.  Some of us have both bindings stuck in our heads, and
+especially from a command line, I expect C-[befknp] to work or else I
+get a little crotchety.
+
+As such, I add back those bindings in viins mode.
+
+The idea is to do little adjustments directly from viins; bigger
+changes (e.g. adding/removing files in command names... stuff that
+really should be done via scripting...) can be done via vicmd.
+
 [1]: https://github.com/jws85/em
 [2]: https://github.com/jws85/.emacs.d
