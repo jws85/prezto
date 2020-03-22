@@ -9,6 +9,14 @@ function magit () {
 }
 alias calc="em -l '(full-calc)'"
 
+# 'vm' alias runs mv backwards, e.g. these are equivalent:
+#    mv 1 2
+#    vm 2 1
+# This is useful if you need to reverse a previous 'mv'.
+function vm {
+    mv $2 $1
+}
+
 # get the weather
 alias weather="curl wttr.in"
 
