@@ -8,3 +8,7 @@ function magit () {
     fi
 }
 alias calc="em -l '(full-calc)'"
+
+# get the weather
+alias weather="curl wttr.in"
+

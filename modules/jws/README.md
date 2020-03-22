@@ -16,5 +16,10 @@ This code simply wraps around this script further to launch specific
 apps; I count this as a "personal" hack as a lot of the functions are
 calls to self-written defuns in [my .emacs setup][2].
 
+Weather
+-------
+
+From wttr.in.
+
 [1]: https://github.com/jws85/em
 [2]: https://github.com/jws85/.emacs.d
