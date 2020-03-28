@@ -25,8 +25,10 @@ alias weather="curl wttr.in"
 # also these conflict with nothing as far as i can tell?
 bindkey -M viins '^A' beginning-of-line
 bindkey -M viins '^B' backward-char
+bindkey -M viins '^D' delete-char-or-list
 bindkey -M viins '^E' end-of-line
 bindkey -M viins '^F' forward-char
 bindkey -M viins '^K' kill-line
 bindkey -M viins '^P' up-history
 bindkey -M viins '^N' down-history
+bindkey -M viins '^Y' yank
