@@ -28,6 +28,9 @@ zstyle ':prezto:load' pmodule \
   'fasd' \
   'git' \
   'tmux' \
+  'archive' \
+  'dpkg' \
+  'rsync' \
   'colored-man-pages' \
   'cpv' \
   'fzf' \
