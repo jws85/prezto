@@ -10,6 +10,12 @@ if [[ -z "$LANG" ]]; then
   export LANG='en_US.UTF-8'
 fi
 
+# Welcome message #####################################################
+# Wish I had $ZPREZTODIR here...
+if test -f $HOME/.zprezto/modules/welcome/init.zsh; then
+  source $HOME/.zprezto/modules/welcome/init.zsh
+fi
+
 # Key timeout #########################################################
 # Shorten timeout from leaving zsh vi edit mode
 export KEYTIMEOUT=1

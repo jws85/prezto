@@ -34,7 +34,6 @@ zstyle ':prezto:load' pmodule \
   'colored-man-pages' \
   'cpv' \
   'fzf' \
-  'welcome' \
   'jws'
 
 # Set the key mapping style to 'emacs' or 'vi'.
