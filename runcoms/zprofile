@@ -87,6 +87,11 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 # Local changes #######################################################
 
+# So I can drop a file in here
+for file in $HOME/.zprezto/local/*(N); do
+  . $file
+done
+
 if [ -f ~/.zshenv.local ]; then
    . ~/.zshenv.local
 fi
