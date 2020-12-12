@@ -20,6 +20,10 @@ function vm {
 # get the weather
 alias weather="curl wttr.in"
 
+# fallback ssh command, if it is problematic to use your current
+# terminfo on the remote box
+alias sshx="TERM=xterm-256color ssh"
+
 # put useful emacs bindings back into vi insert mode
 # because i have permanent emacs dain bramage
 # also these conflict with nothing as far as i can tell?
