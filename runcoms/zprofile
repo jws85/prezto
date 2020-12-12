@@ -66,20 +66,6 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Fix aptitude line-drawing chars in PuTTY: https://superuser.com/a/278337
 export NCURSES_NO_UTF8_ACS=1
 
-# PHP/Composer ########################################################
-
-if (( $+commands[composer] )) ; then
-    export PATH=$( composer config -g home )/vendor/bin:$PATH
-fi
-
-# Golang ##############################################################
-
-# Now that go modules are a thing, I'm moving the GOPATH to a hidden
-# location and making it non-configurable, bwahahahaha
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/.config/go
-export PATH=$PATH:$GOPATH/bin
-
 # Microsoft telemetry #################################################
 
 # Disable it!!!!!!
